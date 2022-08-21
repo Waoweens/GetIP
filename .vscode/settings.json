@@ -1,0 +1,7 @@
+{
+	"python.formatting.provider": "black",
+	"python.formatting.blackPath": "./bin/tan",
+	"python.formatting.blackArgs": [
+		"--use-tabs"
+	]
+}
