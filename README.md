@@ -1,14 +1,14 @@
-# GetIPl
+# GetIP
 ## Setup
 > Note: These instructions are for Linux and macOS.
 
-Create virtual environment
+Create virtual environment:
 
 ```sh
 python3 -m venv venv
 ```
 
-Activate virtual environment
+Activate virtual environment:
 
 > fish and csh users: use activate.fish and activate.csh respectively
 
