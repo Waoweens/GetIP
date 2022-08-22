@@ -9,8 +9,15 @@ token = os.environ["TOKEN"]
 prefix = os.environ["PREFIX"]
 intents = discord.Intents.default()
 intents.message_content = True
-
 bot = commands.Bot(command_prefix=prefix, intents=intents)
+
+servers = [
+	"mc.hypixel.net",
+	"us.mineplex.com",
+	"play.cubecraft.net",
+	"play.invadedlands.net",
+]
+
 
 @bot.event
 async def on_ready():
@@ -21,8 +28,13 @@ async def on_ready():
 async def ping(ctx):
 	await ctx.send(f"Pong! {round(bot.latency * 1000)}ms")
 
+
 @bot.command(description="Sends server status.")
 async def status(ctx):
-	await ctx.send("tmp")
+	embed = discord.Embed()
+	embed.title = "Server Statuses"
+	embed.description = "TEST"
+	await ctx.send(embed=embed)
+
 
 bot.run(token)
